@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               DataFlow-Proc-DBF
-version:            0.01
+version:            0.02
 abstract:           A dBase DBF converting processor
 author:
     - Breno G. de Oliveira <garu@cpan.org>
