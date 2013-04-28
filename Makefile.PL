@@ -10,8 +10,8 @@ WriteMakefile(
     PL_FILES            => {},
     PREREQ_PM => {
         'Test::More'           => 0,
-        'DataFlow'             => 0,
-        'Moose'                => 0,
+        'DataFlow'             => 1.111480, # DataFlow::Proc::Converter
+        'Moose'                => 1.09,
         'MooseX::Aliases'      => 0,
         'XBase'                => 0,
         'File::Temp'           => 0,
@@ -19,6 +19,15 @@ WriteMakefile(
         'autodie'              => 0,
         'namespace::autoclean' => 0,
     },
+
+    META_MERGE      => {
+        resources => {
+            license     =>      'http://dev.perl.org/licenses/',
+            bugtracker  =>      'http://rt.cpan.org/NoAuth/Bugs.html?Dist=DataFlow-Proc-DBF',
+            repository  =>      'http://github.com/garu/DataFlow-Proc-DBF',
+        },
+    },
+
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'DataFlow-Proc-DBF-*' },
 );
